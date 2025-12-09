@@ -1,5 +1,4 @@
 #Requires -RunAsAdministrator
-#Requires -Modules Posh-SSH
 #Requires -Modules Vmware.VimAutomation.Core
 
 <#
@@ -704,5 +703,6 @@ Pause-PSScript
 $esxiHostOBJ = Vmware.VimAutomation.Core\Get-VMHost -Name $WorkingESXiHost -Verbose
 
 Vmware.VimAutomation.Core\Set-VMHost -VMHost $esxiHostOBJ -State Connected -Confirm:$true -Verbose
+
 
 Write-Host "End of Script" -ForegroundColor White -BackgroundColor DarkBlue
